@@ -1,0 +1,405 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    font-size: 70%;
+}
+
+nav {
+    background-color: #232323;
+    display: flex;          /* mantém o layout em linha */
+    align-items: center;    /* centraliza verticalmente */
+    justify-content: space-between;
+    padding: 10px 30px;     /* espaçamento manual */
+    width: 100%;
+    height: 100px;
+}
+
+/* Área da logo */
+nav .img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+nav .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Área das opções */
+nav .option {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .option a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .2s;
+}
+
+nav .option a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+
+
+
+/* ==== HOME GERAL ==== */
+.home-main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ==== BANNER ==== */
+.banner {
+    background: url("./img/banner-padaria.png") center/cover no-repeat;
+    height: 350px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.3em;
+    margin: 10px 0 20px;
+}
+
+.btn-banner {
+    background-color: #ffcc00;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* ==== SOBRE ==== */
+.sobre {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* ==== VANTAGENS ==== */
+.vantagens {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.vantagens-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vantagem {
+    background: white;
+    width: 28%;
+    min-width: 230px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.vantagem img {
+    width: 60px;
+    height: 60px;
+}
+
+/* ==== DESTAQUES ==== */
+.produtos-destaque h2 {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.cards-container {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* ==== PRODUTOS EM DESTAQUE - ESTILO DO CARD ==== */
+.card {
+    /* Novo: Estrutura visual */
+    background-color: white; /* Fundo branco para destacar */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Importante para o border-radius funcionar na imagem */
+    text-align: center;
+    
+    /* Configuração de largura original */
+    width: 30%; 
+    min-width: 250px; 
+
+    /* Novo: Efeito de Transição */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efeito de HOVER (Interatividade) */
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Altura fixa para manter todos os cards uniformes */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    /* Remove qualquer margin/padding que possa vir de fora */
+    display: block; 
+}
+
+/* Container interno para o texto (padding) */
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #cc6600; /* Use uma cor de destaque da sua marca (ex: marrom de pão) */
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* Estilo para o link (Call-to-Action) */
+.card a {
+    display: inline-block;
+    background-color: #ffcc00; /* Cor de destaque/amarela */
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #ffaa00;
+}
+
+/* ==== DEPOIMENTOS ==== */
+
+.depoimentos {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.depo-container {
+    margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.depo {
+    background: white;
+    width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza a imagem e o texto */
+    text-align: center;
+}
+
+.depo-avatar {
+    width: 70px; /* Tamanho da imagem de perfil */
+    height: 70px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Garante que a imagem se ajuste bem */
+    margin-bottom: 15px; /* Espaço abaixo da foto */
+    border: 3px solid #ffcc00; /* Borda amarela para destaque (opcional) */
+}
+
+.depo span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ==== LOCALIZAÇÃO ==== */
+.localizacao {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.mapa {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* MAIN A SER FEITO DAQUI PRA CIMA */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+
+.footer {
+    background-color: #232323; /* cor de padaria/amarela */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* para responsividade */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+    flex: 1 1 200px; /* largura mínima de 200px */
+}
+
+.footer h3, .footer h4 {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.footer p{
+    padding-left: 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+
+/* CSS DO JAVA SCRIPT ABAIXO */
+
+#btnTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* invisível até aparecer */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#btnTop:hover {
+    background-color: #e6b800;
+    transform: scale(1.1);
+}
+.carrinho-icone {
+    position: relative; /* Para posicionar o badge */
+    color: white; 
+    font-size: 24px;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.carrinho-icone:hover {
+    color: #ffc107; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilo para o Contador (Badge) */
+#contador-carrinho {
+    position: absolute;
+    top: -10px; /* Ajusta para cima */
+    right: -10px; /* Ajusta para a direita */
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: #dc3545; /* Cor vermelha do Bootstrap (danger) */
+    display: none; /* Escondido por padrão, o JS irá mostrar se houver itens */
+}
+
+/* Ajuste de estilo para os botões "Comprar" no card */
+.btn-comprar {
+    margin-top: 15px; /* Adiciona espaço entre o preço e o botão */
+    width: 100%;
+}

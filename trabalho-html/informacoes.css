@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    font-size: 70%;
+}
+
+nav {
+    background-color: #232323;
+    display: flex;          /* mantém o layout em linha */
+    align-items: center;    /* centraliza verticalmente */
+    justify-content: space-between;
+    padding: 10px 30px;     /* espaçamento manual */
+    width: 100%;
+    height: 100px;
+}
+
+/* Área da logo */
+nav .img {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+nav .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Área das opções */
+nav .option {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav .option a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .2s;
+}
+
+nav .option a:hover {
+    background: rgba(255,255,255,0.15);
+}
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+/* Estilo do Título Principal (H1) Geralmente usado para o nome da página/titulo */
+main h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilo dos Subtítulos (H2) */
+main h2 {
+    color: #333333;
+}
+
+/* Responsivo para Imagens e Mapas (IFRAME) para que não ultrapasse a largura da tela */
+main iframe, 
+main img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* altura fixa para o mapa do Google */
+main iframe {
+    height: 450px;
+    border: 5px solid #ffb52f !important;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #ff9c00;
+}
+
+/* Estilo do Container do Card Animado */
+.card {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    padding-bottom: 1px;
+    background: linear-gradient(#4c0b0b, #3a0707);
+    border-radius: 20px;
+    border: 4px solid #ffb52f;
+    position: relative;
+    box-shadow: 0 0 25px #ff9c00;
+    overflow: hidden;
+}
+
+/* Efeito de brilho interno do card */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 18px #ff8e00 inset;
+    pointer-events: none;
+}
+
+/* Estilo das Partículas (Animação do Card) */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #e6ad11;
+    border-radius: 70%;
+    animation: cair 2.5s linear infinite;
+    opacity: .85;
+    pointer-events: none;
+}
+
+/* Animação "Cair" das partículas */
+@keyframes cair {
+    0%   { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(160px) scale(.3); opacity: 0; }
+}
+
+/* Título dentro do Card Animado */
+.header-title {
+    padding: 25px 0 10px 0;
+    text-align: center;
+}
+
+/* Texto do Logo dentro do Card */
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffdd9a;
+    text-shadow: 0 0 6px #ff8c00, 0 0 12px #ff7300, 0 0 18px #ff4d00;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Efeito 3D no emoji de Pizza */
+.pizza3d {
+    display: inline-block;
+    font-size: 40px;
+    transform: rotateX(20deg) rotateY(-15deg) rotateZ(5deg);
+    margin-right: 8px;
+    color: #FFFFFF; 
+    text-shadow: 
+        0 0 2px #FFFFFF,
+        0 0 4px #FFFFFF,
+        0 0 8px #FFD700,
+        0 0 13px #FFD700,
+        0 0 16px #FFD700;
+}
+
+/* Linha decorativa dentro do Card */
+.linha {
+    width: 80%;
+    height: 4px;
+    background: #ffb52f;
+    margin: 8px auto 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ff8c00;
+}
+
+/* Tabela dentro do Card */
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card th {
+    background: #d48309; 
+    color: white;
+    padding: 12px;
+    font-size: 17px;
+}
+
+.card td {
+    padding: 20px;
+    border-bottom: 1px solid #5c3b1e;
+    color: #ffd37a;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card tr:nth-child(even) { background: #5e0e0e; }
+.card tr:nth-child(odd)  { background: #4c0b0b; }
+
+/* Estilo Base para Botões */
+.btn-base {
+    display: inline-block;
+    color: #ffffff !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 0.95em;
+}
+
+/* Efeito de aumentar levemente ao passar o mouse */
+.btn-base:hover {
+    transform: scale(1.20);
+}
+
+/* Botão Específico do WhatsApp */
+.btn-whatsapp {
+    background-color: #25D366;
+    padding: 10px 22px;
+    font-size: 0.9em;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Container do Grid */
+.conteudo-grid {
+    display: block; /* Padrão para mobile: bloco (um embaixo do outro) */
+}
+
+/* MEDIA QUERY - Regras para Telas Maiores (PC/Tablet) regras apenas se a tela for maior que 768px */
+@media (min-width: 768px) {
+    main {
+        text-align: center; /* Alinha texto à esquerda no PC */
+        max-width: 100%; /* Permite que o conteúdo ocupe mais largura */
+        margin: 40px auto;
+    }
+    
+    /* título principal centralizado */
+    main h1 {
+        text-align: center;
+    }
+
+    /* layout de grade (duas colunas) */
+    .conteudo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+        gap: 40px; /* Espaço entre as colunas */
+        align-items: start; /* Alinha o topo das colunas */
+    }
+
+    /* altura do mapa no PC */
+    .coluna-mapa iframe {
+        width: 80%;
+        height: 650px;
+    }
+    
+    /* título na coluna de texto */
+    .coluna-texto h2 {
+        text-align: center;
+    }
+    
+    /* card dentro da coluna de texto */
+    .coluna-texto .card {
+        margin: 0 auto 20px auto; 
+    }
+
+    /* parágrafos na coluna de texto */
+    .coluna-texto p {
+        text-align: center;
+    }
+    
+    /* botão do WhatsApp no PC */
+    .coluna-texto .btn-whatsapp {
+        display: block;
+        margin: 0 auto; /* Margem automática nas laterais centraliza o bloco */
+        text-align: center;
+        width: fit-content; /* Largura ajustada ao conteúdo */
+    }
+
+    /* título H2 da coluna do mapa */
+    .coluna-mapa h2 {
+        text-align: center;
+    }
+
+    /* texto/botão abaixo do mapa */
+    .coluna-mapa p {
+        text-align: center;
+    }
+}
+
+/* MAIN A SER FEITO DAQUI PRA CIMA */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+/* MAIN A SER FEITO DAQUI PRA BAIXO */
+
+.footer {
+    background-color: #232323;
+    /* cor de padaria/amarela */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* para responsividade */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-contact,
+.footer-social {
+    flex: 1 1 200px;
+    /* largura mínima de 200px */
+}
+
+.footer h3,
+.footer h4 {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    padding-left: 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+.carrinho-icone {
+    position: relative; /* Para posicionar o badge */
+    color: white; 
+    font-size: 24px;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.carrinho-icone:hover {
+    color: #ffc107; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilo para o Contador (Badge) */
+#contador-carrinho {
+    position: absolute;
+    top: -10px; /* Ajusta para cima */
+    right: -10px; /* Ajusta para a direita */
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    background-color: #dc3545; /* Cor vermelha do Bootstrap (danger) */
+    display: none; /* Escondido por padrão, o JS irá mostrar se houver itens */
+}
+
+/* Ajuste de estilo para os botões "Comprar" no card */
+.btn-comprar {
+    margin-top: 15px; /* Adiciona espaço entre o preço e o botão */
+    width: 100%;
+}

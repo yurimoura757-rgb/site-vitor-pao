@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href=".\img\logo.png">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <p>Vitor Pães - Pizza Delivery</p>
+    </header>
+
+    <nav>
+        <div class="img">
+            <img src=".\img\logo.png" alt="img">
+        </div>
+        <div class="option">
+            <p>
+                <a href="./index.html">Home</a>
+                <a href=".\pizza.html">Pizzas</a>
+                <a href="./paes.html">Pães</a>
+                <a href=".\bolos.html">Bolos</a>
+                <a href="./bebidas.html">Bebidas</a>
+                <a href="./doces.html">Doces</a>
+                <a href="./informacoes.html">Informações</a>
+                <a href="./login.html">Login</a>
+            </p>
+
+        </div>
+        <a href="carrinho.html" class="carrinho-icone">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="contador-carrinho" class="badge bg-danger rounded-pill">0</span>
+        </a>
+        
+    </nav>
+
+<div class="container mt-5">
+  
+
+  <main>
+        <div class="acesso-container">
+            <form id="loginForm">
+                <h2>Acesso do Cliente</h2>
+                <div class="form-group">
+                    <label for="login-username">Usuário (Email):</label>
+                    <input type="email" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Senha:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn-acesso">Entrar</button>
+            </form>
+
+            <form id="registerForm">
+                <h2>Criar Sua Conta</h2>
+                 <div class="form-group">
+                    <label for="reg-name">Seu Nome:</label>
+                    <input type="text" id="reg-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-username">Email:</label>
+                    <input type="email" id="reg-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Senha:</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+                <button type="submit" class="btn-acesso">Cadastrar</button>
+            </form>
+            
+            <div class="switch-form">
+                <p id="switch-to-register">Não tem conta? <a href="#">Crie uma agora!</a></p>
+                <p id="switch-to-login" style="display:none;">Já tem conta? <a href="#">Fazer Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script>
+        // Lógica para alternar entre os formulários
+        document.getElementById('switch-to-register').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+            document.getElementById('switch-to-register').style.display = 'none';
+            document.getElementById('switch-to-login').style.display = 'block';
+        });
+
+        document.getElementById('switch-to-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('registerForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('switch-to-login').style.display = 'none';
+            document.getElementById('switch-to-register').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
